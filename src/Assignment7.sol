@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Assignment7 is ERC20, Ownable {
     constructor(string memory _name, string memory _symbol)
-        ERC20(_name, _symbol)
+        ERC20(_name, _symbol)Ownable(msg.sender)
     {}
 
     function mint(address to, uint amount) public onlyOwner {
